@@ -32,7 +32,7 @@ export default function Home() {
           <span className="text-blue-600">Meubles Intemporels</span>  
         </h1>
         <p className='mt-6 text-lg max-w-prose text-muted-foreground'>
-          Découvrez des meubles élégants et accessibles qui allient style et confort. 
+          Découvrez des meubles élégants et accessibles qui allient style et confort.
           K-Corp Furniture Marketplace vous aide à créer des espaces uniques et inspirants.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 mt-6">
