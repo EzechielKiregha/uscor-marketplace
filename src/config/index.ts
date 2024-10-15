@@ -1,22 +1,22 @@
 export const PRODUCT_CATEGORIES = [
     {
-      label: "Meubles de Salon",
+      label: "Meubles & Arts",
       value: "meubles_salon" as const,
       featured: [
         {
           name: "Sélection du Moment",
           href: "#",
-          imageSrc: "/nav/ui-kits/mixed.jpg"
+          imageSrc: "/nav/art/Vibrant Art Gallery.jpg"
         },
         {
           name: "Canapé Confort",
           href: "#",
-          imageSrc: "/nav/ui-kits/blue.jpg"
+          imageSrc: "/nav/salon/Vintage yellow sofa.jpg"
         },
         {
           name: "Table Basse Élégante",
           href: "#",
-          imageSrc: "/nav/ui-kits/purple.jpg"
+          imageSrc: "/nav/salon/table basse elegante.jpg"
         }
       ]
     },
@@ -27,41 +27,41 @@ export const PRODUCT_CATEGORIES = [
         {
           name: "Nouveautés",
           href: "#",
-          imageSrc: "/nav/bureau/desk.jpg"
+          imageSrc: "/nav/bureau/Elegant Office Chair.jpg"
         },
         {
           name: "Chaise Ergonomique",
           href: "#",
-          imageSrc: "/nav/bureau/chaise.jpg"
+          imageSrc: "/nav/bureau/office.jpeg"
         },
         {
           name: "Bureau Moderne",
           href: "#",
-          imageSrc: "/nav/bureau/bureau.jpg"
+          imageSrc: "/nav/bureau/Minimalist Office Space.jpg"
         }
       ]
     },
-    {
-      label: "Meubles de Chambre",
-      value: "meubles_chambre" as const,
-      featured: [
-        {
-          name: "Populaires",
-          href: "#",
-          imageSrc: "/nav/chambre/bed.jpg"
-        },
-        {
-          name: "Lit Confortable",
-          href: "#",
-          imageSrc: "/nav/chambre/lit.jpg"
-        },
-        {
-          name: "Armoire Spacieuse",
-          href: "#",
-          imageSrc: "/nav/chambre/armoire.jpg"
-        }
-      ]
-    },
+    // {
+    //   label: "Meubles de Chambre",
+    //   value: "meubles_chambre" as const,
+    //   featured: [
+    //     {
+    //       name: "Populaires",
+    //       href: "#",
+    //       imageSrc: "/nav/chambre/bed.jpg"
+    //     },
+    //     {
+    //       name: "Lit Confortable",
+    //       href: "#",
+    //       imageSrc: "/nav/chambre/lit.jpg"
+    //     },
+    //     {
+    //       name: "Armoire Spacieuse",
+    //       href: "#",
+    //       imageSrc: "/nav/chambre/armoire.jpg"
+    //     }
+    //   ]
+    // },
     {
         label: "Icons",
         value: "icons"as const,
