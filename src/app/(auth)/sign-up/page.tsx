@@ -38,7 +38,7 @@ const Page = () => {
       onError: (err) => {
         if (err.data?.code === 'CONFLICT') {
           toast.error(
-            'This email is already in use. Sign in instead?'
+            "Cet email est en cours d'utilisation, connecte toi"
           )
 
           return
@@ -51,12 +51,12 @@ const Page = () => {
         }
 
         toast.error(
-          'Something went wrong. Please try again.'
+          "Il y'a eu un problem, essayer encore."
         )
       },
       onSuccess: ({ sentToEmail }) => {
         toast.success(
-          `Verification email sent to ${sentToEmail}.`
+          `Le mail de verification a ete envoye a ${sentToEmail}.`
         )
         router.push('/verify-email?to=' + sentToEmail)
       },
@@ -76,7 +76,7 @@ const Page = () => {
           <div className='flex flex-col items-center space-y-2 text-center'>
             <Icons.logo className='h-20 w-20' />
             <h1 className='text-2xl font-semibold tracking-tight'>
-              Create an account
+              Creer un compte
             </h1>
 
             <Link
@@ -85,7 +85,7 @@ const Page = () => {
                 className: 'gap-1.5',
               })}
               href='/sign-in'>
-              Already have an account? Sign-in
+              J&apos;ai deja un compte? connecte-moi
               <ArrowRight className='h-4 w-4' />
             </Link>
           </div>
@@ -101,7 +101,7 @@ const Page = () => {
                       'focus-visible:ring-red-500':
                         errors.email,
                     })}
-                    placeholder='you@example.com'
+                    placeholder='toi@example.com'
                   />
                   {errors?.email && (
                     <p className='text-sm text-red-500'>
@@ -111,7 +111,7 @@ const Page = () => {
                 </div>
 
                 <div className='grid gap-1 py-2'>
-                  <Label htmlFor='password'>Password</Label>
+                  <Label htmlFor='password'>Mot de passe</Label>
                   <Input
                     {...register('password')}
                     type='password'
@@ -128,7 +128,7 @@ const Page = () => {
                   )}
                 </div>
 
-                <Button>Sign up</Button>
+                <Button>S&apos;inscrire</Button>
               </div>
             </form>
           </div>

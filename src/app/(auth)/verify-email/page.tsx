@@ -29,12 +29,12 @@ const VerifyEmailPage = ({ searchParams }: PageProps) => {
             </div>
 
             <h3 className='font-semibold text-2xl'>
-              Check your email
+              Visite ton email
             </h3>
 
             {toEmail ? (
               <p className='text-muted-foreground text-center'>
-                We&apos;ve sent a verification link to{' '}
+                Nous avons envoyer le lien de verification a {' '}
                 <span className='font-semibold'>
                   {toEmail}
                 </span>
@@ -42,8 +42,7 @@ const VerifyEmailPage = ({ searchParams }: PageProps) => {
               </p>
             ) : (
               <p className='text-muted-foreground text-center'>
-                We&apos;ve sent a verification link to your
-                email.
+                Nous avons envoyer le lien de verification a ton email.
               </p>
             )}
           </div>

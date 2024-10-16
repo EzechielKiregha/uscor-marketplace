@@ -1,8 +1,8 @@
-import { LucideProps } from "lucide-react";
+import { LucideProps } from 'lucide-react'
 
 export const Icons = {
-    logo : (props: LucideProps) => (
-        <svg { ...props }version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+  logo: (props: LucideProps) => (
+    <svg { ...props }version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 width="100%" viewBox="0 0 948 281" enable-background="new 0 0 948 281" xmlSpace="preserve">
             <path fill="#FEFFFF" opacity="1.000000" stroke="none" 
                 d="
@@ -1319,5 +1319,5 @@ export const Icons = {
                 C592.940857,171.724411 593.766663,173.830368 594.737854,176.288132 
             z"/>
             </svg>
-    )
+  ),
 }

@@ -84,8 +84,7 @@ const Page = () => {
           <div className='flex flex-col items-center space-y-2 text-center'>
             <Icons.logo className='h-20 w-20' />
             <h1 className='text-2xl font-semibold tracking-tight'>
-              Sign in to your {isSeller ? 'seller' : ''}{' '}
-              account
+              Connecte a ton compte {isSeller ? 'seller' : ''}{' '}
             </h1>
 
             <Link
@@ -94,7 +93,7 @@ const Page = () => {
                 className: 'gap-1.5',
               })}
               href='/sign-up'>
-              Don&apos;t have an account?
+              Je n&apos;ai pas de compte?
               <ArrowRight className='h-4 w-4' />
             </Link>
           </div>
@@ -120,7 +119,7 @@ const Page = () => {
                 </div>
 
                 <div className='grid gap-1 py-2'>
-                  <Label htmlFor='password'>Password</Label>
+                  <Label htmlFor='password'>Mot de passe</Label>
                   <Input
                     {...register('password')}
                     type='password'
@@ -141,7 +140,7 @@ const Page = () => {
                   {isLoading && (
                     <Loader2 className='mr-2 h-4 w-4 animate-spin' />
                   )}
-                  Sign in
+                  Connecte
                 </Button>
               </div>
             </form>
@@ -154,7 +153,7 @@ const Page = () => {
               </div>
               <div className='relative flex justify-center text-xs uppercase'>
                 <span className='bg-background px-2 text-muted-foreground'>
-                  or
+                  ou
                 </span>
               </div>
             </div>
@@ -164,14 +163,14 @@ const Page = () => {
                 onClick={continueAsBuyer}
                 variant='secondary'
                 disabled={isLoading}>
-                Continue as customer
+                Continue etaint que acheteur
               </Button>
             ) : (
               <Button
                 onClick={continueAsSeller}
                 variant='secondary'
                 disabled={isLoading}>
-                Continue as seller
+                Continue etant que vendeur
               </Button>
             )}
           </div>
