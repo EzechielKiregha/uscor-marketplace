@@ -29,7 +29,7 @@ export const EmailTemplate = ({
     <Html>
       <Head />
       <Preview>
-        The marketplace for high-quality digital goods.
+        Un marche a tellement de produits de bonne qualite.
       </Preview>
       <Body style={main}>
         <Container style={container}>
@@ -37,7 +37,7 @@ export const EmailTemplate = ({
             src={`${process.env.NEXT_PUBLIC_SERVER_URL}/hippo-newsletter-sign-up.png`}
             width='150'
             height='150'
-            alt='DigitalHippo'
+            alt='Uscor-market'
             style={logo}
           />
           <Text style={paragraph}>Hi there,</Text>

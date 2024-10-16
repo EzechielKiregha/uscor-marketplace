@@ -1,13 +1,17 @@
 import React from 'react'
 import MaxWidthWrapper from './MaxWidthWrapper'
 import Link from 'next/link'
-import { Icons } from './icons'
+import { Icons } from './Icons'
 import NavItems from './NavItems'
 import { buttonVariants } from './ui/button'
 import Cart from './Cart'
+import { getServerSideUser } from '@/lib/payload-utils'
+import { cookies } from 'next/headers'
+import UserAccountNav from './UserAccountNav'
 
-function Navbar() {
-    const user = null
+async function Navbar() {
+    const nextCookies = cookies()
+    const {user} = await getServerSideUser(nextCookies)
 
   return (
     <div className="bg-white sticky z-50 top-0 inset-x-0 h-16">
@@ -36,7 +40,7 @@ function Navbar() {
                                             variant : "ghost"
                                         })}
                                         >
-                                        Sign in
+                                        Connecte
                                     </Link>
                                 )}
 
@@ -46,14 +50,16 @@ function Navbar() {
                                     />
                                 )}
 
-                                {user ? <p></p> : (
+                                {user ? (
+                                    <UserAccountNav user={user} />
+                                ) : (
                                     <Link 
                                         href="/sign-up"
                                         className={buttonVariants({
                                             variant : "ghost"
                                         })}
                                         >
-                                        Register
+                                        S&apos;inscrire
                                     </Link>
                                 )}
 

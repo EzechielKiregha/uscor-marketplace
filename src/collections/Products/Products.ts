@@ -5,7 +5,7 @@ import {
 import { PRODUCT_CATEGORIES } from '../../config'
 import { Access, CollectionConfig } from 'payload/types'
 import { Product, User } from '../../payload-types'
-import { stripe } from '../../lib/stripe'
+// import { stripe } from '../../lib/stripe'
 
 const addUser: BeforeChangeHook<Product> = async ({
   req,
@@ -25,29 +25,29 @@ const syncUser: AfterChangeHook<Product> = async ({
     id: req.user.id,
   })
 
-  if (fullUser && typeof fullUser === 'object') {
-    const { products } = fullUser
+  // if (fullUser && typeof fullUser === 'object') {
+  //   const { products } = fullUser
 
-    const allIDs = [
-      ...(products?.map((product) =>
-        typeof product === 'object' ? product.id : product
-      ) || []),
-    ]
+  //   const allIDs = [
+  //     ...(products?.map((product) =>
+  //       typeof product === 'object' ? product.id : product
+  //     ) || []),
+  //   ]
 
-    const createdProductIDs = allIDs.filter(
-      (id, index) => allIDs.indexOf(id) === index
-    )
+  //   const createdProductIDs = allIDs.filter(
+  //     (id, index) => allIDs.indexOf(id) === index
+  //   )
 
-    const dataToUpdate = [...createdProductIDs, doc.id]
+  //   const dataToUpdate = [...createdProductIDs, doc.id]
 
-    await req.payload.update({
-      collection: 'users',
-      id: fullUser.id,
-      data: {
-        products: dataToUpdate,
-      },
-    })
-  }
+  //   await req.payload.update({
+  //     collection: 'users',
+  //     id: fullUser.id,
+  //     data: {
+  //       products: dataToUpdate,
+  //     },
+  //   })
+  // }
 }
 
 const isAdminOrHasAccess =
@@ -96,38 +96,38 @@ export const Products: CollectionConfig = {
         if (args.operation === 'create') {
           const data = args.data as Product
 
-          const createdProduct =
-            await stripe.products.create({
-              name: data.name,
-              default_price_data: {
-                currency: 'USD',
-                unit_amount: Math.round(data.price * 100),
-              },
-            })
+          // const createdProduct =
+          //   await stripe.products.create({
+          //     name: data.name,
+          //     default_price_data: {
+          //       currency: 'USD',
+          //       unit_amount: Math.round(data.price * 100),
+          //     },
+          //   })
 
-          const updated: Product = {
-            ...data,
-            stripeId: createdProduct.id,
-            priceId: createdProduct.default_price as string,
-          }
+          // const updated: Product = {
+          //   ...data,
+          //   stripeId: createdProduct.id,
+          //   priceId: createdProduct.default_price as string,
+          // }
 
-          return updated
+          // return updated
         } else if (args.operation === 'update') {
           const data = args.data as Product
 
-          const updatedProduct =
-            await stripe.products.update(data.stripeId!, {
-              name: data.name,
-              default_price: data.priceId!,
-            })
+          // const updatedProduct =
+          //   await stripe.products.update(data.stripeId!, {
+          //     name: data.name,
+          //     default_price: data.priceId!,
+          //   })
 
-          const updated: Product = {
-            ...data,
-            stripeId: updatedProduct.id,
-            priceId: updatedProduct.default_price as string,
-          }
+          // const updated: Product = {
+          //   ...data,
+          //   stripeId: updatedProduct.id,
+          //   priceId: updatedProduct.default_price as string,
+          // }
 
-          return updated
+          // return updated
         }
       },
     ],
