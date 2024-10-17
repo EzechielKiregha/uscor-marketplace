@@ -5,7 +5,7 @@ import {
 import { PRODUCT_CATEGORIES } from '../../config'
 import { Access, CollectionConfig } from 'payload/types'
 import { Product, User } from '../../payload-types'
-// import { stripe } from '../../lib/stripe'
+import { stripe } from '../../lib/stripe'
 
 const addUser: BeforeChangeHook<Product> = async ({
   req,
@@ -29,7 +29,7 @@ const syncUser: AfterChangeHook<Product> = async ({
     const { products } = fullUser
 
     const allIDs = [
-      ...(products?.map((product) =>
+      ...(products.map((product) =>
         typeof product === 'object' ? product.id : product
       ) || []),
     ]

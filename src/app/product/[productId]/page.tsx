@@ -47,7 +47,7 @@ async function Page({ params }: PageProps) {
     ({ value }) => value === product.category
   )?.label
 
-  const validUrls = product.images.map(({ image }) =>
+  const validUrls = product.images.map(({ image } : any) =>
     typeof image === 'string' ? image : image.url
   )
   .filter(Boolean) as string[]
@@ -110,7 +110,7 @@ async function Page({ params }: PageProps) {
                   className='h-5 w-5 flex-shrink-0 text-green-500'
                 />
                 <p className='ml-2 text-sm text-muted-foreground'>
-                  Eligible for instant delivery
+                  Eligible pour la livraison rapide
                 </p>
               </div>
             </section>
