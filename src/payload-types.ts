@@ -120,10 +120,10 @@ export interface PayloadPreference {
   };
   key?: string | null;
   value?:
-    | {
-        [k: string]: unknown;
-      }
-    | unknown[]
+    // | {
+    //     [k: string]: unknown;
+    //   }
+    // | unknown[]
     | string
     | number
     | boolean
