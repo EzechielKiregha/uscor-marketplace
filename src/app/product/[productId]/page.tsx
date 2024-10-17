@@ -48,9 +48,9 @@ async function Page({ params }: PageProps) {
   )?.label
 
   const validUrls = product.images.map(({ image }) =>
-      typeof image === 'string' ? image : image.url
-    )
-    .filter(Boolean) as string[]
+    typeof image === 'string' ? image : image.url
+  )
+  .filter(Boolean) as string[]
 
   return (
     <MaxWidthWrapper className='bg-white'>
@@ -148,8 +148,8 @@ async function Page({ params }: PageProps) {
       <ProductReel
         href='/products'
         query={{ category: product.category, limit: 4 }}
-        title={`Similar ${label}`}
-        subtitle={`Browse similar high-quality ${label} just like '${product.name}'`}
+        title={`Similaire a ${label}`}
+        subtitle={`Naviguer de ${label}, produits de grande qualite tout comme  '${product.name}'`}
       />
     </MaxWidthWrapper>
   )
