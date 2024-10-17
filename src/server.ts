@@ -41,7 +41,7 @@ const start = async () => {
   app.post(
     '/api/webhooks/stripe',
     webhookMiddleware,
-    // stripeWebhookHandler
+    stripeWebhookHandler
   )
 
   const payload = await getPayloadClient({
@@ -70,7 +70,7 @@ const start = async () => {
 
   const cartRouter = express.Router()
 
-  // cartRouter.use(payload.authenticate)
+  cartRouter.use(payload.authenticate)
 
   cartRouter.get('/', (req, res) => {
     const request = req as PayloadRequest
@@ -85,13 +85,13 @@ const start = async () => {
   })
 
   app.use('/cart', cartRouter)
-  // app.use(
-  //   '/api/trpc',
-  //   trpcExpress.createExpressMiddleware({
-  //     router: appRouter,
-  //     createContext,
-  //   })
-  // )
+  app.use(
+    '/api/trpc',
+    trpcExpress.createExpressMiddleware({
+      router: appRouter,
+      createContext,
+    })
+  )
 
   app.use((req, res) => nextHandler(req, res))
 
