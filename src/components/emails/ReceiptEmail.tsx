@@ -51,7 +51,7 @@ export const ReceiptEmail = ({
                 width='100'
                 height='100'
                 alt='DigitalHippo'
-              />
+              />  
             </Column>
 
             <Column align='right' style={tableCell}>

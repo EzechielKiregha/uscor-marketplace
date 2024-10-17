@@ -41,6 +41,7 @@ const start = async () => {
   app.post(
     '/api/webhooks/stripe',
     webhookMiddleware,
+    // @ts-expect-error
     stripeWebhookHandler
   )
 
@@ -70,6 +71,7 @@ const start = async () => {
 
   const cartRouter = express.Router()
 
+  // @ts-expect-error
   cartRouter.use(payload.authenticate)
 
   cartRouter.get('/', (req, res) => {

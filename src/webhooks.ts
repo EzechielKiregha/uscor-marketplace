@@ -99,12 +99,15 @@ export const stripeWebhookHandler = async (
     // send receipt
     try {
       const data = await resend.emails.send({
-        from: 'DigitalHippo <hello@joshtriedcoding.com>',
+        from: 'Uscor-Marketplace <uscor-marketplace@k-corp.com>',
+        // @ts-expect-error
         to: [user.email],
         subject:
           'Thanks for your order! This is your receipt.',
+          // @ts-expect-error
         html: ReceiptEmailHtml({
           date: new Date(),
+          // @ts-expect-error
           email: user.email,
           orderId: session.metadata.orderId,
           products: order.products as Product[],

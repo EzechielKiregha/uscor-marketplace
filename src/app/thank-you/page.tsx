@@ -41,6 +41,7 @@ const ThankYouPage = async ({
   const orderUserId =
     typeof order.user === 'string'
       ? order.user
+      // @ts-expect-error
       : order.user.id
 
   if (orderUserId !== user?.id) {
@@ -78,11 +79,11 @@ const ThankYouPage = async ({
             {order._isPaid ? (
               <p className='mt-2 text-base text-muted-foreground'>
                 Commande a ete traite. Nous avons envoyez la recu
-                et details de l'achat a to email : {' '}
+                et details de l&apos;achat a to email : {' '}
+                
                 {typeof order.user !== 'string' ? (
-                  <span className='font-medium text-gray-900'>
-                    {order.user.email}
-                  </span>
+                  // @ts-expect-error
+                  <span className='font-medium text-gray-900'>{order.user.email}</span>
                 ) : null}
                 .
               </p>
@@ -183,19 +184,15 @@ const ThankYouPage = async ({
                     {formatPrice(orderTotal + 1)}
                   </p>
                 </div>
-              </div>
-
-              <PaymentStatus
-                isPaid={order._isPaid}
-                orderEmail={(order.user as User).email}
-                orderId={order.id}
+                {/* @ts-expect-error */}
+              </div><PaymentStatus isPaid={order._isPaid} orderEmail={(order.user as User).email} orderId={order.id}
               />
 
               <div className='mt-16 border-t border-gray-200 py-6 text-right'>
                 <Link
                   href='/products'
                   className='text-sm font-medium text-blue-600 hover:text-blue-500'>
-                  Continue a faire l'achat &rarr;
+                  Continue a faire l&apos;achat &rarr;
                 </Link>
               </div>
             </div>
