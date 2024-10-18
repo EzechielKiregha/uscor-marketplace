@@ -1,7 +1,6 @@
 import { z } from 'zod'
 import {
   privateProcedure,
-  publicProcedure,
   router,
 } from './trpc'
 import { TRPCError } from '@trpc/server'
@@ -14,7 +13,7 @@ export const paymentRouter = router({
     .input(z.object({ productIds: z.array(z.string()) }))
     .mutation(async ({ ctx, input }) => {
       const { user } = ctx
-      let { productIds } = input
+      const { productIds } = input
 
       if (productIds.length === 0) {
         throw new TRPCError({ code: 'BAD_REQUEST' })
@@ -39,7 +38,7 @@ export const paymentRouter = router({
         collection: 'orders',
         data: {
           _isPaid: false,
-          // @ts-expect-error
+          // @ts-expect-error lint hmm
           products: filteredProducts.map((prod) => prod.id),
           user: user.id,
         },
@@ -79,6 +78,7 @@ export const paymentRouter = router({
         return { url: stripeSession.url }
       } catch (err) {
         return { url: null }
+        console.log("Internal Error [500]: ",err);
       }
     }),
   pollOrderStatus: privateProcedure

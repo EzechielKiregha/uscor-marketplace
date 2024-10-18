@@ -25,6 +25,7 @@ export const useAuth = () => {
       router.refresh()
     } catch (err) {
       toast.error("Nous etions pas capable de vous deconnecter, eassaie encore")
+      console.log("Internal Error [500]: ",err);
     }
   }
 

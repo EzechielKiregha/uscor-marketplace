@@ -29,7 +29,7 @@ const syncUser: AfterChangeHook<Product> = async ({
     const { products } = fullUser
 
     const allIDs = [
-      // @ts-expect-error
+      // @ts-expect-error lint probably
       ...(products.map((product) =>
         typeof product === 'object' ? product.id : product
       ) || []),
