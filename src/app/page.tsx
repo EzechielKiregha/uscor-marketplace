@@ -1,4 +1,6 @@
+import Footer from '@/components/Footer';
 import MaxWidthWrapper from '@/components/MaxWidthWrapper'
+import Navbar from '@/components/Navbar';
 import ProductReel from '@/components/ProductReel';
 import { Button, buttonVariants } from '@/components/ui/button';
 import { ArrowDownToLine, DollarSign, Paintbrush } from 'lucide-react';
@@ -26,9 +28,10 @@ const perks = [
 export default function Home() {
   return (
     <>
+    {/* <Navbar /> */}
     <MaxWidthWrapper>
       <div className="py-20 mx-auto text-center flex flex-col items-center max-w-3xl">
-        <h1 className='text-4xl font-bold tracking-tight text-gray-900 sm:text-gray-6xl'>
+        <h1 className='text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl'>
         Transformez Votre Espace avec des{' '}
           <span className="text-blue-600">Meubles Intemporels</span>  
         </h1>
@@ -76,6 +79,7 @@ export default function Home() {
         </div>
       </MaxWidthWrapper>
     </section>
+    {/* <Footer /> */}
     </>
   );
 }

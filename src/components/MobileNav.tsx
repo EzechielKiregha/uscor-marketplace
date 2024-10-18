@@ -106,7 +106,7 @@ const MobileNav = () => {
                   onClick={() => closeOnCurrent('/sign-in')}
                   href='/sign-in'
                   className='-m-2 block p-2 font-medium text-gray-900'>
-                  Connecte
+                  Connexion
                 </Link>
               </div>
               <div className='flow-root'>

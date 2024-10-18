@@ -26,7 +26,7 @@ export default buildConfig({
     meta: {
       titleSuffix: '- Uscor-Market',
       favicon: '/favicon.ico',
-      ogImage: '/thumbnail.jpg',
+      ogImage: '/thumbnail.png',
     },
   },
   rateLimit: {

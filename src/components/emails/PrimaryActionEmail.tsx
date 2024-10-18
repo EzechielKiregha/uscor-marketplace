@@ -13,6 +13,7 @@ import {
 } from '@react-email/components'
 
 import * as React from "react"
+import { Icons } from '../Icons'
 
 interface EmailTemplateProps {
   actionLabel: string
@@ -34,15 +35,15 @@ export const EmailTemplate = ({
       <Body style={main}>
         <Container style={container}>
           <Img
-            src={`${process.env.NEXT_PUBLIC_SERVER_URL}/hippo-newsletter-sign-up.png`}
+            src={`${process.env.NEXT_PUBLIC_SERVER_URL}/${Icons.logo}`}
             width='150'
-            height='150'
+            height='110'
             alt='Uscor-market'
             style={logo}
           />
-          <Text style={paragraph}>Salutation,</Text>
+          <Text style={paragraph}>Salut,</Text>
           <Text style={paragraph}>
-            Bienvenue, Nous sommes Uscor-MarketNous offrons des 
+            Bienvenue, Nous sommes Uscor-Market Nous offrons des 
             meubles de haute qualité à des prix qui respectent 
             votre budget. {''}
             Pour continuer utilisez le bouton ci-dessous {actionLabel}.

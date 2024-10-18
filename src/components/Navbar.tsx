@@ -23,9 +23,9 @@ async function Navbar() {
 
                         <div className="ml-4 flex lg:ml-0">
 
-                            <Link href='/'>
+                            <a href='/'>
                                 <Icons.logo className='h-16 w-30'/>
-                            </Link>
+                            </a>
                         </div>
                         <div className="hidden z-50 lg:ml-8 lg:block lg:self-stretch">
                             <NavItems/>
@@ -40,7 +40,7 @@ async function Navbar() {
                                             variant : "ghost"
                                         })}
                                         >
-                                        Connecte
+                                        Connexion
                                     </Link>
                                 )}
 

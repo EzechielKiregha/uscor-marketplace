@@ -33,12 +33,12 @@ const Page = () => {
 
   const router = useRouter()
 
-  const { mutate } =
+  const { mutate, isLoading } =
     trpc.auth.createPayloadUser.useMutation({
       onError: (err) => {
         if (err.data?.code === 'CONFLICT') {
           toast.error(
-            "Cet email est en cours d'utilisation, connecte toi"
+            "Cet email est en cours d'utilisation, Connectez-vous"
           )
 
           return
@@ -51,7 +51,7 @@ const Page = () => {
         }
 
         toast.error(
-          "Il y'a eu un problem, essayer encore."
+          "Il y'a eu un problem, reessayer encore."
         )
       },
       onSuccess: ({ sentToEmail }) => {
@@ -74,7 +74,7 @@ const Page = () => {
       <div className='container relative flex pt-20 flex-col items-center justify-center lg:px-0'>
         <div className='mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]'>
           <div className='flex flex-col items-center space-y-2 text-center'>
-            <Icons.logo className='h-20 w-20' />
+            <Icons.logo className='h-14 w-auto' />
             <h1 className='text-2xl font-semibold tracking-tight'>
               Creer un compte
             </h1>
@@ -85,7 +85,7 @@ const Page = () => {
                 className: 'gap-1.5',
               })}
               href='/sign-in'>
-              J&apos;ai deja un compte? connecte-moi
+              J&apos;ai deja un compte? Connexion
               <ArrowRight className='h-4 w-4' />
             </Link>
           </div>
@@ -128,7 +128,11 @@ const Page = () => {
                   )}
                 </div>
 
-                <Button>S&apos;inscrire</Button>
+                <Button
+                  disabled={ isLoading ? true : false}
+                >
+                  S&apos;inscrire
+                </Button>
               </div>
             </form>
           </div>

@@ -68,11 +68,11 @@ const Cart = () => {
               <div className='space-y-1.5 text-sm'>
                 <div className='flex'>
                   <span className='flex-1'>Shipping</span>
-                  <span>Free</span>
+                  <span>Frais</span>
                 </div>
                 <div className='flex'>
                   <span className='flex-1'>
-                    Transaction Fee
+                    Frais de transaction
                   </span>
                   <span>{formatPrice(fee)}</span>
                 </div>
@@ -91,7 +91,7 @@ const Cart = () => {
                     className={buttonVariants({
                       className: 'w-full',
                     })}>
-                    Continue to Checkout
+                    Continue le payment de produit
                   </Link>
                 </SheetTrigger>
               </SheetFooter>
@@ -109,7 +109,7 @@ const Cart = () => {
               />
             </div>
             <div className='text-xl font-semibold'>
-              Your cart is empty
+              Ton panier est vide
             </div>
             <SheetTrigger asChild>
               <Link
@@ -120,7 +120,7 @@ const Cart = () => {
                   className:
                     'text-sm text-muted-foreground',
                 })}>
-                Add items to your cart to checkout
+                Ajouter les itemes dans le parnier
               </Link>
             </SheetTrigger>
           </div>

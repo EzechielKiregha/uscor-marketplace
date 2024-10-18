@@ -48,7 +48,7 @@ const UserAccountNav = ({ user }: { user: User }) => {
         <DropdownMenuItem
           onClick={signOut}
           className='cursor-pointer'>
-          Deconnecte
+          Deconnexion
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

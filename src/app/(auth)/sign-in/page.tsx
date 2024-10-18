@@ -81,9 +81,9 @@ const Page = () => {
       <div className='container relative flex pt-20 flex-col items-center justify-center lg:px-0'>
         <div className='mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]'>
           <div className='flex flex-col items-center space-y-2 text-center'>
-            <Icons.logo className='h-20 w-20' />
+            <Icons.logo className='h-14 w-auto' />
             <h1 className='text-2xl font-semibold tracking-tight'>
-              Connecte a ton compte {isSeller ? 'seller' : ''}{' '}
+              Connexion {isSeller ? 'Vendeur' : ''}{' '}
             </h1>
 
             <Link
@@ -139,7 +139,7 @@ const Page = () => {
                   {isLoading && (
                     <Loader2 className='mr-2 h-4 w-4 animate-spin' />
                   )}
-                  Connecte
+                  Connexion
                 </Button>
               </div>
             </form>
@@ -162,7 +162,7 @@ const Page = () => {
                 onClick={continueAsBuyer}
                 variant='secondary'
                 disabled={isLoading}>
-                Continue etaint que acheteur
+                Continue etant qu&apos;acheteur
               </Button>
             ) : (
               <Button

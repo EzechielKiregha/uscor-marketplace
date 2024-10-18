@@ -21,11 +21,11 @@ const VerifyEmail = ({ token }: VerifyEmailProps) => {
       <div className='flex flex-col items-center gap-2'>
         <XCircle className='h-8 w-8 text-red-600' />
         <h3 className='font-semibold text-xl'>
-          There was a problem
+          Il y&apos;a eu un problem
         </h3>
         <p className='text-muted-foreground text-sm'>
-          This token is not valid or might be expired.
-          Please try again.
+          Ce code n'est pas valide, ou peut etre il a expire
+          reessayer encore.
         </p>
       </div>
     )
@@ -43,15 +43,15 @@ const VerifyEmail = ({ token }: VerifyEmailProps) => {
         </div>
 
         <h3 className='font-semibold text-2xl'>
-          You&apos;re all set!
+          Vamooos!!! Verification avec succes 
         </h3>
         <p className='text-muted-foreground text-center mt-1'>
-          Thank you for verifying your email.
+          Merci de verifier votre email.
         </p>
         <Link
           className={buttonVariants({ className: 'mt-4' })}
           href='/sign-in'>
-          Sign in
+            Connexion
         </Link>
       </div>
     )
@@ -62,10 +62,10 @@ const VerifyEmail = ({ token }: VerifyEmailProps) => {
       <div className='flex flex-col items-center gap-2'>
         <Loader2 className='animate-spin h-8 w-8 text-zinc-300' />
         <h3 className='font-semibold text-xl'>
-          Verifying...
+          encours de verification...
         </h3>
         <p className='text-muted-foreground text-sm'>
-          Ceci ne prendre un moment.
+          Ceci ne prendra qu'un moment.
         </p>
       </div>
     )
