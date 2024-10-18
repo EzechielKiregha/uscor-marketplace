@@ -103,7 +103,7 @@ export const stripeWebhookHandler = async (
         // @ts-expect-error all passed successfull - lint issues some how
         to: [user.email],
         subject:
-          'Thanks for your order! This is your receipt.',
+          'Merci pour ta commande!Voici ton recu.',
           // @ts-expect-error all passed successfull - lint issues some how
         html: ReceiptEmailHtml({
           date: new Date(),

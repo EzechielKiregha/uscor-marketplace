@@ -5,17 +5,17 @@ export const PRODUCT_CATEGORIES = [
       featured: [
         {
           name: "Sélection du Moment",
-          href: "#",
+          href: "/products",
           imageSrc: "/nav/art/Vibrant Art Gallery.jpg"
         },
         {
           name: "Canapé Confort",
-          href: "#",
+          href: "/products",
           imageSrc: "/nav/salon/Vintage yellow sofa.jpg"
         },
         {
           name: "Table Basse Élégante",
-          href: "#",
+          href: "/products",
           imageSrc: "/nav/salon/table basse elegante.jpg"
         }
       ]
@@ -26,17 +26,17 @@ export const PRODUCT_CATEGORIES = [
       featured: [
         {
           name: "Nouveautés",
-          href: "#",
+          href: "/products",
           imageSrc: "/nav/bureau/Elegant Office Chair.jpg"
         },
         {
           name: "Chaise Ergonomique",
-          href: "#",
+          href: "/products",
           imageSrc: "/nav/bureau/office.jpeg"
         },
         {
           name: "Bureau Moderne",
-          href: "#",
+          href: "/products",
           imageSrc: "/nav/bureau/Minimalist Office Space.jpg"
         }
       ]
@@ -47,17 +47,17 @@ export const PRODUCT_CATEGORIES = [
     //   featured: [
     //     {
     //       name: "Populaires",
-    //       href: "#",
+    //       href: "/products",
     //       imageSrc: "/nav/chambre/bed.jpg"
     //     },
     //     {
     //       name: "Lit Confortable",
-    //       href: "#",
+    //       href: "/products",
     //       imageSrc: "/nav/chambre/lit.jpg"
     //     },
     //     {
     //       name: "Armoire Spacieuse",
-    //       href: "#",
+    //       href: "/products",
     //       imageSrc: "/nav/chambre/armoire.jpg"
     //     }
     //   ]
@@ -68,17 +68,17 @@ export const PRODUCT_CATEGORIES = [
         featured: [
           {
             name: "Plus favories",
-            href: "#",
+            href: "/products",
             imageSrc: "/nav/icons/picks.jpg"
           },
           {
             name: "Nouveautes",
-            href: "#",
+            href: "/products",
             imageSrc: "/nav/icons/new.jpg"
           },
           {
             name: "Meubles Plus Vendue",
-            href: "#",
+            href: "/products",
             imageSrc: "/nav/icons/bestsellers.jpg"
           }
         ]

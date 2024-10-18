@@ -5,7 +5,10 @@ import Navbar from "@/components/Navbar";
 import Providers from "@/components/Providers";
 import Footer from "@/components/Footer";
 import { Toaster } from "sonner";
+import { Inter } from 'next/font/google'
+import { cn } from "@/lib/utils";
 
+const inter = Inter({ subsets: ['latin'] })
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -28,14 +31,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="h-full">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative font-sans h-full`}
+        className={cn(
+          'relative h-full font-sans antialiased',
+          inter.className
+        )}
       >
         <main className="relative flex flex-col min-h-screen">
           <Providers>
             <Navbar/>
-            <div className="flex-grow flex-1">{children}</div>
+            <div className="flex-row flex-1">{children}</div>
             <Footer />
           </Providers>
         </main>
