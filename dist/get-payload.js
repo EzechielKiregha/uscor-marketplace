@@ -76,8 +76,12 @@ var transporter = nodemailer_1.default.createTransport({
         pass: process.env.RESEND_API_KEY,
     },
 });
+// Disable the "no-explicit-any" rule for the next line
+/* eslint-disable-next-line @typescript-eslint/no-explicit-any */
 var cached = global.payload;
 if (!cached) {
+    // Disable the "no-explicit-any" rule for the next line
+    /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
     cached = global.payload = {
         client: null,
         promise: null,
