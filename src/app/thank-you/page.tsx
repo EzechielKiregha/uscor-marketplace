@@ -41,7 +41,7 @@ const ThankYouPage = async ({
   const orderUserId =
     typeof order.user === 'string'
       ? order.user
-      // @ts-expect-error
+      // @ts-expect-error all passed successfull - lint issues some how
       : order.user.id
 
   if (orderUserId !== user?.id) {
@@ -82,7 +82,7 @@ const ThankYouPage = async ({
                 et details de l&apos;achat a to email : {' '}
                 
                 {typeof order.user !== 'string' ? (
-                  // @ts-expect-error
+                  // @ts-expect-error all passed successfull - lint issues some how
                   <span className='font-medium text-gray-900'>{order.user.email}</span>
                 ) : null}
                 .
@@ -184,7 +184,7 @@ const ThankYouPage = async ({
                     {formatPrice(orderTotal + 1)}
                   </p>
                 </div>
-                {/* @ts-expect-error */}
+                {/* @ts-expect-error all passed successfull - lint issues some how */}
               </div><PaymentStatus isPaid={order._isPaid} orderEmail={(order.user as User).email} orderId={order.id}
               />
 

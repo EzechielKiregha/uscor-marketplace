@@ -33,7 +33,7 @@ const Page = () => {
 
   const router = useRouter()
 
-  const { mutate, isLoading } =
+  const { mutate } =
     trpc.auth.createPayloadUser.useMutation({
       onError: (err) => {
         if (err.data?.code === 'CONFLICT') {

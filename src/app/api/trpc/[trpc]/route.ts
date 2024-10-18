@@ -6,7 +6,7 @@ const handler = (req: Request) => {
     endpoint: '/api/trpc',
     req,
     router: appRouter,
-    // @ts-expect-error
+    // @ts-expect-error all passed successfull - lint issues some how
     createContext: () => ({}),
   })
 }

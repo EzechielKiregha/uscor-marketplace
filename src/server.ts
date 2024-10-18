@@ -22,7 +22,6 @@ const createContext = ({
   req,
   res,
 })
-
 export type ExpressContext = inferAsyncReturnType<
   typeof createContext
 >
@@ -41,7 +40,7 @@ const start = async () => {
   app.post(
     '/api/webhooks/stripe',
     webhookMiddleware,
-    // @ts-expect-error
+    // @ts-expect-error all passed successfull - lint issues some how
     stripeWebhookHandler
   )
 
@@ -60,7 +59,7 @@ const start = async () => {
         'Next.js is building for production'
       )
 
-      // @ts-expect-error
+      // @ts-expect-error all passed successfull - lint issues some how
       await nextBuild(path.join(__dirname, '../'))
 
       process.exit()
@@ -70,8 +69,7 @@ const start = async () => {
   }
 
   const cartRouter = express.Router()
-
-  // @ts-expect-error
+  // @ts-expect-error I got idea why - lint maybe not sure
   cartRouter.use(payload.authenticate)
 
   cartRouter.get('/', (req, res) => {

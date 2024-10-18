@@ -19,7 +19,6 @@ import {
 } from '@/lib/validators/account-credentials-validator'
 import { trpc } from '@/trpc/client'
 import { toast } from 'sonner'
-import { ZodError } from 'zod'
 import { useRouter, useSearchParams } from 'next/navigation'
 
 const Page = () => {

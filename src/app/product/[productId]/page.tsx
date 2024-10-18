@@ -46,8 +46,8 @@ async function Page({ params }: PageProps) {
   const label = PRODUCT_CATEGORIES.find(
     ({ value }) => value === product.category
   )?.label
-// @ts-expect-error
-  const validUrls = product.images.map(({ image } : any) =>
+// @ts-expect-error all passed successfull - lint issues some how
+  const validUrls = product.images.map(({ image }) =>
     typeof image === 'string' ? image : image.url
   )
   .filter(Boolean) as string[]
@@ -83,7 +83,7 @@ async function Page({ params }: PageProps) {
 
             <div className='mt-4'>
               <h1 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
-                {/* @ts-expect-error */}
+                {/* @ts-expect-error all passed successfull - lint issues some how */}
                 {product.name}
               </h1>
             </div>
@@ -91,7 +91,7 @@ async function Page({ params }: PageProps) {
             <section className='mt-4'>
               <div className='flex items-center'>
                 <p className='font-medium text-gray-900'>
-                  {/* @ts-expect-error */}
+                  {/* @ts-expect-error all passed successfull - lint issues some how */}
                   {formatPrice(product.price)}
                 </p>
 
@@ -102,7 +102,7 @@ async function Page({ params }: PageProps) {
 
               <div className='mt-4 space-y-6'>
                 <p className='text-base text-muted-foreground'>
-                  {/* @ts-expect-error */}
+                  {/* @ts-expect-error all passed successfull - lint issues some how */}
                   {product.description}
                 </p>
               </div>
@@ -130,7 +130,7 @@ async function Page({ params }: PageProps) {
           <div className='mt-10 lg:col-start-1 lg:row-start-2 lg:max-w-lg lg:self-start'>
             <div>
               <div className='mt-10'>
-                {/* @ts-expect-error */}
+                {/* @ts-expect-error all passed successfull - lint issues some how */}
                 <AddToCartButton product={product} />
               </div>
               <div className='mt-6 text-center'>
@@ -151,7 +151,7 @@ async function Page({ params }: PageProps) {
 
       <ProductReel
         href='/products'
-        // @ts-expect-error
+        // @ts-expect-error all passed successfull - lint issues some how
         query={{ category: product.category, limit: 4 }}
         title={`Similaire a ${label}`}
         subtitle={`Naviguer de ${label}, produits de grande qualite tout comme  '${product.name}'`}
