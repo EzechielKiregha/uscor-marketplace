@@ -40,7 +40,7 @@ export const ReceiptEmail = ({
   return (
     <Html>
       <Head />
-      <Preview>Your DigitalHippo Receipt</Preview>
+      <Preview>Ton recu Uscor Market</Preview>
 
       <Body style={main}>
         <Container style={container}>
@@ -50,12 +50,12 @@ export const ReceiptEmail = ({
                 src={`${process.env.NEXT_PUBLIC_SERVER_URL}/hippo-email-sent.png`}
                 width='100'
                 height='100'
-                alt='DigitalHippo'
+                alt='Uscor-Market'
               />  
             </Column>
 
             <Column align='right' style={tableCell}>
-              <Text style={heading}>Receipt</Text>
+              <Text style={heading}>Recu</Text>
             </Column>
           </Section>
           <Section style={informationTable}>
@@ -95,7 +95,7 @@ export const ReceiptEmail = ({
             </Row>
           </Section>
           <Section style={productTitleTable}>
-            <Text style={productsTitle}>Order Summary</Text>
+            <Text style={productsTitle}>Commande en bref</Text>
           </Section>
           {products.map((product) => {
             const { image } = product.images[0]
@@ -131,7 +131,7 @@ export const ReceiptEmail = ({
                   <Link
                     href={`${process.env.NEXT_PUBLIC_SERVER_URL}/thank-you?orderId=${orderId}`}
                     style={productLink}>
-                    Download Asset
+                    Telecharge - produit
                   </Link>
                 </Column>
 
@@ -154,7 +154,7 @@ export const ReceiptEmail = ({
                 paddingTop: 20,
               }}>
               <Text style={productTitle}>
-                Transaction Fee
+                Frais de transaction
               </Text>
             </Column>
 
@@ -183,13 +183,13 @@ export const ReceiptEmail = ({
           <Hr style={productPriceLineBottom} />
 
           <Text style={footerLinksWrapper}>
-            <Link href='#'>Account Settings</Link> •{' '}
-            <Link href='#'>Terms of Sale</Link> •{' '}
+            <Link href='#'> Parametres du compte</Link> •{' '}
+            <Link href='#'>Regles de vente</Link> •{' '}
             <Link href='#'>Privacy Policy </Link>
           </Text>
           <Text style={footerCopyright}>
-            Copyright © 2023 DigitalHippo Inc. <br />{' '}
-            <Link href='#'>All rights reserved</Link>
+            Copyright © 2023 Uscor-Market Inc. <br />{' '}
+            <Link href='#'>Tout les droits sont reserver</Link>
           </Text>
         </Container>
       </Body>

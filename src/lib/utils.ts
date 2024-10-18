@@ -28,8 +28,8 @@ export function formatPrice(
 }
 
 export function constructMetadata({
-  title = 'DigitalHippo - the marketplace for digital assets',
-  description = 'DigitalHippo is an open-source marketplace for high-quality digital goods.',
+  title = 'Uscor-Market - Le marche pour fourniture de bureau, meubles et consors',
+  description = 'Uscor-Market is an open-source marketplace for high-quality goods.',
   image = '/thumbnail.png',
   icons = '/favicon.ico',
   noIndex = false,
@@ -57,7 +57,7 @@ export function constructMetadata({
       title,
       description,
       images: [image],
-      creator: '@joshtriedcoding',
+      creator: '@EzechielKiregha',
     },
     icons,
     metadataBase: new URL('https://digitalhippo.up.railway.app'),

@@ -40,11 +40,12 @@ export const EmailTemplate = ({
             alt='Uscor-market'
             style={logo}
           />
-          <Text style={paragraph}>Hi there,</Text>
+          <Text style={paragraph}>Salutation,</Text>
           <Text style={paragraph}>
-            Welcome to DigitalHippo, the marketplace for
-            high quality digital goods. Use the button below
-            to {actionLabel}.
+            Bienvenue, Nous sommes Uscor-MarketNous offrons des 
+            meubles de haute qualité à des prix qui respectent 
+            votre budget. {''}
+            Pour continuer utilisez le bouton ci-dessous {actionLabel}.
           </Text>
           <Section style={btnContainer}>
             <Button style={button} href={href}>
@@ -54,12 +55,12 @@ export const EmailTemplate = ({
           <Text style={paragraph}>
             Best,
             <br />
-            The DigitalHippo team
+            Equipe Uscor-Market
           </Text>
           <Hr style={hr} />
           <Text style={footer}>
-            If you did not request this email, you can
-            safely ignore it.
+            Si vous n&apos;avez demande ce mail,
+            ignorez-le.
           </Text>
         </Container>
       </Body>
