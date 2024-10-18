@@ -17,10 +17,13 @@ const transporter = nodemailer.createTransport({
     pass: process.env.RESEND_API_KEY,
   },
 })
-
+// Disable the "no-explicit-any" rule for the next line
+/* eslint-disable-next-line @typescript-eslint/no-explicit-any */
 let cached = (global as any).payload
 
 if (!cached) {
+  // Disable the "no-explicit-any" rule for the next line
+  /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
   cached = (global as any).payload = {
     client: null,
     promise: null,

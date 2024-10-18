@@ -24,7 +24,7 @@ const VerifyEmail = ({ token }: VerifyEmailProps) => {
           Il y&apos;a eu un problem
         </h3>
         <p className='text-muted-foreground text-sm'>
-          Ce code n'est pas valide, ou peut etre il a expire
+          Ce code n&apos;est pas valide, ou peut etre il a expire
           reessayer encore.
         </p>
       </div>
@@ -65,7 +65,7 @@ const VerifyEmail = ({ token }: VerifyEmailProps) => {
           encours de verification...
         </h3>
         <p className='text-muted-foreground text-sm'>
-          Ceci ne prendra qu'un moment.
+          Ceci ne prendra qu&apos;un moment.
         </p>
       </div>
     )

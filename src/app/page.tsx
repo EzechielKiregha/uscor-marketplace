@@ -1,6 +1,4 @@
-import Footer from '@/components/Footer';
 import MaxWidthWrapper from '@/components/MaxWidthWrapper'
-import Navbar from '@/components/Navbar';
 import ProductReel from '@/components/ProductReel';
 import { Button, buttonVariants } from '@/components/ui/button';
 import { ArrowDownToLine, DollarSign, Paintbrush } from 'lucide-react';
