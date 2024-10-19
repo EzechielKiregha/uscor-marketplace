@@ -50,7 +50,7 @@ function constructMetadata(_a) {
             description: description,
             images: [image],
             creator: '@EzechielKiregha',
-        }, icons: icons, metadataBase: new URL('uscor-marketplace.up.railway.app') }, (noIndex && {
+        }, icons: icons, metadataBase: new URL('https://digitalhippo.up.railway.app') }, (noIndex && {
         robots: {
             index: false,
             follow: false,
