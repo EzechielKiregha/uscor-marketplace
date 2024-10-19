@@ -102,14 +102,14 @@ export const stripeWebhookHandler = async (
     try {
       const data = await resend.emails.send({
         from: 'Uscor-Marketplace <uscor-marketplace@k-corp.com>',
-        // @ts-expect-error all passed successfull - lint issues some how
+        // @ts-expect-error  all passed successfull - lint issues some how
         to: [user.email],
         subject:
           'Merci pour ta commande!Voici ton recu.',
-          // @ts-expect-error all passed successfull - lint issues some how
+          // @ts-expect-error  all passed successfull - lint issues some how
         html: ReceiptEmailHtml({
           date: new Date(),
-          // @ts-expect-error all passed successfull - lint issues some how
+          //  @ts-expect-error all passed successfull - lint issues some how
           email: user.email,
           orderId: session.metadata.orderId,
           products: order.products as Product[],

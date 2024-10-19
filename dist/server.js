@@ -92,7 +92,7 @@ var start = function () { return __awaiter(void 0, void 0, void 0, function () {
                     },
                 });
                 app.post('/api/webhooks/stripe', webhookMiddleware, 
-                // @ts-expect-error all passed successfull - lint issues some how
+                //   all passed successfull - lint issues some how
                 webhooks_1.stripeWebhookHandler);
                 return [4 /*yield*/, (0, get_payload_1.getPayloadClient)({
                         initOptions: {
@@ -113,10 +113,10 @@ var start = function () { return __awaiter(void 0, void 0, void 0, function () {
                             switch (_a.label) {
                                 case 0:
                                     payload.logger.info('Next.js is building for production');
-                                    // @ts-expect-error all passed successfull - lint issues some how
+                                    //   all passed successfull - lint issues some how
                                     return [4 /*yield*/, (0, build_1.default)(path_1.default.join(__dirname, '../'))];
                                 case 1:
-                                    // @ts-expect-error all passed successfull - lint issues some how
+                                    //   all passed successfull - lint issues some how
                                     _a.sent();
                                     process.exit();
                                     return [2 /*return*/];
@@ -126,7 +126,7 @@ var start = function () { return __awaiter(void 0, void 0, void 0, function () {
                     return [2 /*return*/];
                 }
                 cartRouter = express_1.default.Router();
-                // @ts-expect-error I got idea why - lint maybe not sure
+                //   I got idea why - lint maybe not sure
                 cartRouter.use(payload.authenticate);
                 cartRouter.get('/', function (req, res) {
                     var request = req;

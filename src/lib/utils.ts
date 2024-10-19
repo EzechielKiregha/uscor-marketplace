@@ -60,7 +60,7 @@ export function constructMetadata({
       creator: '@EzechielKiregha',
     },
     icons,
-    metadataBase: new URL('https://digitalhippo.up.railway.app'),
+    metadataBase: new URL('https://uscor-marketplace.up.railway.app'),
     ...(noIndex && {
       robots: {
         index: false,

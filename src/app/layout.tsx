@@ -3,6 +3,8 @@ import "./globals.css";
 import Providers from "@/components/Providers";
 import { Toaster } from "sonner";
 import { constructMetadata } from "@/lib/utils";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export const metadata = constructMetadata()
 
@@ -29,9 +31,9 @@ export default function RootLayout({
       >
         <main className="relative flex flex-col min-h-screen">
           <Providers>
-            
+            <Navbar/>
               <div className="flex-grow flex-1 justify-center items-center">{children}</div>
-            
+            <Footer/>
           </Providers>
         </main>
 
