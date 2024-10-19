@@ -38,7 +38,7 @@ export const paymentRouter = router({
         collection: 'orders',
         data: {
           _isPaid: false,
-          //   lint hmm
+          // @ts-expect-error  lint hmm
           products: filteredProducts.map((prod) => prod.id),
           user: user.id,
         },
