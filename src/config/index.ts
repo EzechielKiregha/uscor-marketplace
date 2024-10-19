@@ -41,27 +41,6 @@ export const PRODUCT_CATEGORIES = [
         }
       ]
     },
-    // {
-    //   label: "Meubles de Chambre",
-    //   value: "meubles_chambre" as const,
-    //   featured: [
-    //     {
-    //       name: "Populaires",
-    //       href: "/products",
-    //       imageSrc: "/nav/chambre/bed.jpg"
-    //     },
-    //     {
-    //       name: "Lit Confortable",
-    //       href: "/products",
-    //       imageSrc: "/nav/chambre/lit.jpg"
-    //     },
-    //     {
-    //       name: "Armoire Spacieuse",
-    //       href: "/products",
-    //       imageSrc: "/nav/chambre/armoire.jpg"
-    //     }
-    //   ]
-    // },
     {
         label: "Outils",
         value: "outils"as const,
