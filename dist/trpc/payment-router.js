@@ -76,7 +76,7 @@ exports.paymentRouter = (0, trpc_1.router)({
                             collection: 'orders',
                             data: {
                                 _isPaid: false,
-                                //   lint hmm
+                                // @ts-expect-error  lint hmm
                                 products: filteredProducts.map(function (prod) { return prod.id; }),
                                 user: user.id,
                             },

@@ -46,12 +46,12 @@ const Page = () => {
   const { mutate: signIn, isLoading } =
     trpc.auth.signIn.useMutation({
       onSuccess: async () => {
-        toast.success('Signed in successfully')
-
-        router.refresh()
+        toast.success('vous etes connecte avec succes!')
+        
 
         if (origin) {
           router.push(`/${origin}`)
+          router.refresh()
           return
         }
 
@@ -61,10 +61,11 @@ const Page = () => {
         }
 
         router.push('/')
+        router.refresh()
       },
       onError: (err) => {
         if (err.data?.code === 'UNAUTHORIZED') {
-          toast.error('Invalid email or password.')
+          toast.error("Nom d'utilisateur ou mot de passe erronee!")
         }
       },
     })
@@ -78,7 +79,7 @@ const Page = () => {
 
   return (
     <>
-      <div className='container relative flex pt-20 flex-col items-center justify-center lg:px-0'>
+      <div className='container relative flex flex-col items-center justify-center lg:px-0'>
         <div className='mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]'>
           <div className='flex flex-col items-center space-y-2 text-center'>
             <Icons.logo className='h-14 w-auto' />
