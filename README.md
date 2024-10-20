@@ -1,3 +1,4 @@
+![thumbnail](https://github.com/user-attachments/assets/feed4f60-91d5-47c4-87c1-4d268522e9c4)
 
 
 # **Uscor Marketplace**
@@ -134,4 +135,8 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ---
 
 **Thank you for exploring Uscor Marketplace!**  
+<<<<<<< HEAD
 I hope this project helps artisans like my father and provides a valuable space for craftsmanship to thrive. If you have any feedback or contributions, feel free to submit a pull request or contact me.
+=======
+I hope this project helps artisans like my father and provides a valuable space for craftsmanship to thrive. If you have any feedback or contributions, feel free to submit a pull request or contact me.
+>>>>>>> befe4f2815c004f77234f6eed9595d9e7aa4d0f8
