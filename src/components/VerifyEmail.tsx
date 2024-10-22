@@ -5,6 +5,7 @@ import { Loader2, XCircle } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { buttonVariants } from './ui/button'
+import { useNavigation } from '@/hooks/useNavigation'
 
 interface VerifyEmailProps {
   token: string
@@ -15,6 +16,7 @@ const VerifyEmail = ({ token }: VerifyEmailProps) => {
     trpc.auth.verifyEmail.useQuery({
       token,
     })
+  const nav = useNavigation()
 
   if (isError) {
     return (
@@ -49,6 +51,7 @@ const VerifyEmail = ({ token }: VerifyEmailProps) => {
           Merci de verifier votre email.
         </p>
         <Link
+          onClick={() => nav()}
           className={buttonVariants({ className: 'mt-4' })}
           href='/sign-in'>
             Connexion

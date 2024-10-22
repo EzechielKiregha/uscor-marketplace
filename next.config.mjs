@@ -3,7 +3,8 @@ const nextConfig = {
     images : {
         domains:[
             'localhost',
-            'uscor-marketplace.up.railway.app'
+            // 'uscor-marketplace.up.railway.app',
+            'uscor-market.giize.com'
         ]
     },
     env: {

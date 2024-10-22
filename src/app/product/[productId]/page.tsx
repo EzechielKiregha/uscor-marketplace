@@ -4,6 +4,7 @@ import MaxWidthWrapper from '@/components/MaxWidthWrapper'
 import ProductReel from '@/components/ProductReel'
 import { PRODUCT_CATEGORIES } from '@/config'
 import { getPayloadClient } from '@/get-payload'
+// import { useNavigation } from '@/hooks/useNavigation'
 import { formatPrice } from '@/lib/utils'
 import { Check, Shield } from 'lucide-react'
 import Link from 'next/link'
@@ -23,6 +24,7 @@ const BREADCRUMBS = [
 async function Page({ params }: PageProps) {
 
     const { productId } = params
+    // const nav = useNavigation()
 
     const payload = await getPayloadClient()
   
@@ -64,6 +66,7 @@ async function Page({ params }: PageProps) {
                   <div className='flex items-center text-sm'>
                     <Link
                       href={breadcrumb.href}
+                      // onClick={() => nav()}
                       className='font-medium text-sm text-muted-foreground hover:text-gray-900'>
                       {breadcrumb.name}
                     </Link>
@@ -140,7 +143,7 @@ async function Page({ params }: PageProps) {
                     className='mr-2 h-5 w-5 flex-shrink-0 text-gray-400'
                   />
                   <span className='text-muted-foreground hover:text-gray-700'>
-                    30 Day Return Guarantee
+                    Retour de monnaie guarantie dans 30 jours
                   </span>
                 </div>
               </div>

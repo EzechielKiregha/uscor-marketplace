@@ -9,9 +9,11 @@ import { getServerSideUser } from '@/lib/payload-utils'
 import { cookies } from 'next/headers'
 import UserAccountNav from './UserAccountNav'
 import MobileNav from './MobileNav'
+// import { useNavigation } from '../hooks/useNavigation'
 
 async function Navbar() {
     const nextCookies = cookies()
+    // const nav = useNavigation()
     const {user} = await getServerSideUser(nextCookies)
     
   return (
@@ -37,6 +39,7 @@ async function Navbar() {
                             <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:space-x-6">
                                 {user ? null : (
                                     <Link 
+                                        // onClick={() => nav()}
                                         href="/sign-in"
                                         className={buttonVariants({
                                             variant : "ghost"
@@ -55,7 +58,8 @@ async function Navbar() {
                                 {user ? (
                                     <UserAccountNav user={user} />
                                 ) : (
-                                    <Link 
+                                    <Link
+                                        // onClick={() => nav()}
                                         href="/sign-up"
                                         className={buttonVariants({
                                             variant : "ghost"

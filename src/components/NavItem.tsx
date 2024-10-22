@@ -62,7 +62,8 @@ const NavItem = ({
                                             alt='product category image'
                                             />
                                         </div>
-                                        <Link href={item.href} className='mt-6 font-medium text-gray-900'>
+                                        <Link
+                                            href={item.href} className='mt-6 font-medium text-gray-900'>
                                             {item.name}
                                         </Link>
                                         <p area-hidden='true' className="mt-1">

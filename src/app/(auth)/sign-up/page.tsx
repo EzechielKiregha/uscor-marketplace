@@ -21,6 +21,7 @@ import { trpc } from '@/trpc/client'
 import { toast } from 'sonner'
 import { ZodError } from 'zod'
 import { useRouter } from 'next/navigation'
+import { useNavigation } from '@/hooks/useNavigation'
 
 const Page = () => {
   const {
@@ -32,7 +33,7 @@ const Page = () => {
   })
 
   const router = useRouter()
-
+  const nav = useNavigation()
   const { mutate, isLoading } =
     trpc.auth.createPayloadUser.useMutation({
       onError: (err) => {
@@ -84,6 +85,7 @@ const Page = () => {
                 variant: 'link',
                 className: 'gap-1.5',
               })}
+              onClick={() => nav()}
               href='/sign-in'>
               J&apos;ai deja un compte? Connexion
               <ArrowRight className='h-4 w-4' />

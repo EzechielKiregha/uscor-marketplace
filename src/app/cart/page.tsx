@@ -3,6 +3,7 @@
 import { Button } from '@/components/ui/button'
 import { PRODUCT_CATEGORIES } from '@/config'
 import { useCart } from '@/hooks/use-cart'
+import { useNavigation } from '@/hooks/useNavigation'
 import { cn, formatPrice } from '@/lib/utils'
 import { trpc } from '@/trpc/client'
 import { Check, Loader2, X } from 'lucide-react'
@@ -15,6 +16,7 @@ function Page() {
     const { items, removeItem } = useCart()
 
   const router = useRouter()
+  const nav = useNavigation()
 
   const { mutate: createCheckoutSession, isLoading } =
     trpc.payment.createSession.useMutation({
@@ -113,6 +115,7 @@ function Page() {
                               <h3 className='text-sm'>
                                 <Link
                                   href={`/product/${product.id}`}
+                                  onClick={() => nav()}
                                   className='font-medium text-gray-700 hover:text-gray-800'>
                                   {product.name}
                                 </Link>

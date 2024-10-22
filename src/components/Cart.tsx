@@ -18,12 +18,14 @@ import { useCart } from '@/hooks/use-cart'
 import { ScrollArea } from './ui/scroll-area'
 import CartItem from './CartItem'
 import { useEffect, useState } from 'react'
+import { useNavigation } from '@/hooks/useNavigation'
 
 const Cart = () => {
   const { items } = useCart()
   const itemCount = items.length
 
   const [isMounted, setIsMounted] = useState<boolean>(false)
+  const nav = useNavigation()
 
   useEffect(() => {
     setIsMounted(true)
@@ -88,8 +90,10 @@ const Cart = () => {
                 <SheetTrigger asChild>
                   <Link
                     href='/cart'
+                    onClick={() => nav()}
                     className={buttonVariants({
                       className: 'w-full',
+
                     })}>
                     Continue le payment de produit
                   </Link>
@@ -114,6 +118,7 @@ const Cart = () => {
             <SheetTrigger asChild>
               <Link
                 href='/products'
+                onClick={() => nav()}
                 className={buttonVariants({
                   variant: 'link',
                   size: 'sm',

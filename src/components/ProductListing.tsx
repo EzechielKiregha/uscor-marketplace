@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { cn, formatPrice } from '@/lib/utils'
 import { PRODUCT_CATEGORIES } from '@/config' 
 import ImageSlider from './ImageSlider'
+import { useNavigation } from '@/hooks/useNavigation'
 
 interface ProductListingProps {
   product: Product | null
@@ -18,7 +19,7 @@ const ProductListing = ({
   index,
 }: ProductListingProps) => {
   const [isVisible, setIsVisible] = useState<boolean>(false)
-
+  const nav = useNavigation()
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true)
@@ -48,6 +49,7 @@ const ProductListing = ({
             'visible animate-in fade-in-5': isVisible,
           }
         )}
+        onClick={() => nav()}
         href={`/product/${product.id}`}>
         <div className='flex flex-col w-full'>
           <ImageSlider urls={validUrls} />

@@ -1,6 +1,7 @@
 'use client'
 
 import { PRODUCT_CATEGORIES } from '@/config'
+import { useNavigation } from '@/hooks/useNavigation'
 import { Menu, X } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -11,6 +12,7 @@ const MobileNav = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
 
   const pathname = usePathname()
+  const nav = useNavigation()
 
   // whenever we click an item in the menu and navigate away, we want to close the menu
   useEffect(() => {
@@ -88,6 +90,7 @@ const MobileNav = () => {
                             />
                           </div>
                           <Link
+                            onClick={() => nav()}
                             href={item.href}
                             className='mt-6 block font-medium text-gray-900'>
                             {item.name}

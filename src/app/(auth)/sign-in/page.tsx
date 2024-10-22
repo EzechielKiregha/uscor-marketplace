@@ -20,12 +20,14 @@ import {
 import { trpc } from '@/trpc/client'
 import { toast } from 'sonner'
 import { useRouter, useSearchParams } from 'next/navigation'
+import { useNavigation } from '@/hooks/useNavigation'
 
 const Page = () => {
   const searchParams = useSearchParams()
   const router = useRouter()
   const isSeller = searchParams.get('as') === 'seller'
   const origin = searchParams.get('origin')
+  const nav = useNavigation()
 
   const continueAsSeller = () => {
     router.push('?as=seller')
@@ -92,6 +94,7 @@ const Page = () => {
                 variant: 'link',
                 className: 'gap-1.5',
               })}
+              onClick={() => nav()}
               href='/sign-up'>
               Je n&apos;ai pas de compte?
               <ArrowRight className='h-4 w-4' />

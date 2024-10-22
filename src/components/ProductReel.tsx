@@ -5,6 +5,7 @@ import { Product } from '@/payload-types'
 import { trpc } from '@/trpc/client'
 import Link from 'next/link'
 import ProductListing from './ProductListing'
+import { useNavigation } from '@/hooks/useNavigation'
 
 interface ProductReelProps {
   title: string
@@ -17,6 +18,7 @@ const FALLBACK_LIMIT = 4
 
 const ProductReel = (props: ProductReelProps) => {
   const { title, subtitle, href, query } = props
+  const nav = useNavigation()
 
   const { data: queryResults, isLoading } =
     trpc.getInfiniteProducts.useInfiniteQuery(
@@ -62,6 +64,7 @@ const ProductReel = (props: ProductReelProps) => {
         {href ? (
           <Link
             href={href}
+            onClick={() => nav()}
             className='hidden text-sm font-medium text-blue-600 hover:text-blue-500 md:block'>
             Voir plus dans une collection{' '}
             <span aria-hidden='true'>&rarr;</span>

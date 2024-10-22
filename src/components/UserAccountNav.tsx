@@ -12,9 +12,11 @@ import {
 import Link from 'next/link'
 import { useAuth } from '@/hooks/use-auth'
 import { LayoutDashboard, LogOut } from 'lucide-react'
+import { useNavigation } from '@/hooks/useNavigation'
 
 const UserAccountNav = ({ user }: { user: User }) => {
   const { signOut } = useAuth()
+  const nav = useNavigation()
 
   return (
     <DropdownMenu>
@@ -44,7 +46,7 @@ const UserAccountNav = ({ user }: { user: User }) => {
 
         <DropdownMenuItem asChild>
           
-          <Link href='/sell'>
+          <Link href='/sell' onClick={() => nav()}>
           <LayoutDashboard className='h4 w-4 mr-2'/>
           Tableau de bord</Link>
         </DropdownMenuItem>

@@ -1,8 +1,9 @@
+"use client"
 import MaxWidthWrapper from '@/components/MaxWidthWrapper'
 import ProductReel from '@/components/ProductReel';
 import { Button, buttonVariants } from '@/components/ui/button';
+import { useNavigation } from '@/hooks/useNavigation';
 import { ArrowDownToLine, DollarSign, Paintbrush } from 'lucide-react';
-import Link from 'next/link';
 
 const perks = [
   {
@@ -24,9 +25,10 @@ const perks = [
 
 
 export default function Home() {
+  const nav = useNavigation()
+
   return (
     <>
-    {/* <Navbar /> */}
     <MaxWidthWrapper>
       <div className="py-20 mx-auto text-center flex flex-col items-center max-w-3xl">
         <h1 className='text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl'>
@@ -38,8 +40,8 @@ export default function Home() {
           Uscor-Marketplace vous aide à créer des espaces uniques et inspirants.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 mt-6">
-          <Link href='/products' className={buttonVariants()}>Naviguer</Link>
-          <Button variant='ghost'>Nos Qualites &rarr;</Button>
+          <Button onClick={() => nav('/products')} className={buttonVariants()}>Explorer</Button>
+          <Button onClick={() => nav('/products?category=meubles_salon&sort=desc')} variant='ghost'>Nos Produits de haute Qualite &rarr;</Button>
         </div>
       </div>
       <ProductReel
@@ -77,7 +79,6 @@ export default function Home() {
         </div>
       </MaxWidthWrapper>
     </section>
-    {/* <Footer /> */}
     </>
   );
 }

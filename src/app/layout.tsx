@@ -5,6 +5,8 @@ import { Toaster } from "sonner";
 import { constructMetadata } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { LoadingProvider } from "./context/loadingContext";
+import ClientWrapper from "./ClientWrapper";
 
 export const metadata = constructMetadata()
 
@@ -25,20 +27,26 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    
     <html lang="en" className="h-full">
+      <LoadingProvider>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative font-sans h-full`}
       >
-        <main className="relative flex flex-col min-h-screen">
-          <Providers>
-            <Navbar/>
-              <div className="flex-grow flex-1 justify-center items-center">{children}</div>
-            <Footer/>
-          </Providers>
-        </main>
+          <main className="relative flex flex-col min-h-screen">
+            <ClientWrapper>
+              <Providers>
+                <Navbar/>
+                  <div className="flex-grow flex-1 justify-center items-center">{children}</div>
+                <Footer/>
+              </Providers>
+            </ClientWrapper>
+          </main>
 
-        <Toaster position='top-center' richColors />
+          <Toaster position='top-center' richColors />
+        
       </body>
+      </LoadingProvider>
     </html>
   );
 }

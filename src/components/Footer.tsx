@@ -4,9 +4,11 @@ import { usePathname } from 'next/navigation'
 import MaxWidthWrapper from './MaxWidthWrapper'
 import { Icons } from './Icons'
 import Link from 'next/link'
+import { useNavigation } from '@/hooks/useNavigation'
 
 const Footer = () => {
   const pathname = usePathname()
+  const nav = useNavigation()
   const pathsToMinimize = [
     '/verify-email',
     '/sign-up',
@@ -42,6 +44,7 @@ const Footer = () => {
                   <p className='mt-2 text-sm text-muted-foreground'>
                     Si tu veux vendre un produit de bonne qualite, fais-le dans une minute{' '}
                     <Link
+                      onClick={() => nav()}
                       href='/sign-in?as=seller'
                       className='whitespace-nowrap font-medium text-black hover:text-zinc-900'>
                       Commence par ici &rarr;

@@ -8,6 +8,7 @@ import { PRODUCT_CATEGORIES } from '@/config'
 import { formatPrice } from '@/lib/utils'
 import Link from 'next/link'
 import PaymentStatus from '@/components/PaymentStatus'
+// import { useNavigation } from '@/hooks/useNavigation'
 
 interface PageProps {
   searchParams: {
@@ -20,6 +21,7 @@ const ThankYouPage = async ({
 }: PageProps) => {
   const orderId = searchParams.orderId
   const nextCookies = cookies()
+  // const nav = useNavigation()
 
   const { user } = await getServerSideUser(nextCookies)
   const payload = await getPayloadClient()
@@ -61,7 +63,7 @@ const ThankYouPage = async ({
       <div className='hidden lg:block h-80 overflow-hidden lg:absolute lg:h-full lg:w-1/2 lg:pr-4 xl:pr-12'>
         <Image
           fill
-          src='/checkout-thank-you.jpg'
+          src='/checkout-thank-you.png'
           className='h-full w-full object-cover object-center'
           alt='thank you for your order'
         />
@@ -191,6 +193,7 @@ const ThankYouPage = async ({
               <div className='mt-16 border-t border-gray-200 py-6 text-right'>
                 <Link
                   href='/products'
+                  // onClick={() => nav()}
                   className='text-sm font-medium text-blue-600 hover:text-blue-500'>
                   Continue a faire l&apos;achat &rarr;
                 </Link>
