@@ -1,6 +1,6 @@
 'use client'
 
-import { Button } from '@/components/ui/button'
+import { Button, buttonVariants } from '@/components/ui/button'
 import { PRODUCT_CATEGORIES } from '@/config'
 import { useCart } from '@/hooks/use-cart'
 import { useNavigation } from '@/hooks/useNavigation'
@@ -216,7 +216,9 @@ function Page() {
                 onClick={() =>
                   createCheckoutSession({ productIds })
                 }
-                className='w-full'
+                className={buttonVariants({
+                  className : 'bg-blue-800 hover:bg-blue-100  text-gray-50 w-full'
+                })}
                 size='lg'>
                 {isLoading ? (
                   <Loader2 className='w-4 h-4 animate-spin mr-1.5' />

@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { Button } from './ui/button'
+import { Button, buttonVariants } from './ui/button'
 import { useCart } from '@/hooks/use-cart'
 import { Product } from '@/payload-types'
 
@@ -27,8 +27,10 @@ const AddToCartButton = ({
         addItem(product)
         setIsSuccess(true)
       }}
-      size='lg'
-      className='w-full'>
+      className={buttonVariants({
+        className : 'bg-blue-800 hover:bg-blue-100  text-white w-full'
+      })}
+      size='lg'>
       {isSuccess ? "C'est fait!!" : 'Ajoute au panier'}
     </Button>
   )

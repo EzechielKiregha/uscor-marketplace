@@ -6,6 +6,7 @@ import { ChevronDown } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useNavigation } from '@/hooks/useNavigation'
 
 type Category = typeof PRODUCT_CATEGORIES[number]
 
@@ -22,6 +23,7 @@ const NavItem = ({
     isOpen,
     isAnyOpen
 }: NavItemProps) => {
+    const nav = useNavigation()
   return <div className="flex">
     <div className="relative flex items-center">
         <Button className='gap-1.5'
@@ -63,11 +65,12 @@ const NavItem = ({
                                             />
                                         </div>
                                         <Link
+                                            onClick={() => nav()}
                                             href={item.href} className='mt-6 font-medium text-gray-900'>
                                             {item.name}
                                         </Link>
                                         <p area-hidden='true' className="mt-1">
-                                            shop now
+                                            achete maintenant
                                         </p>
                                     </div>
                                 ))}

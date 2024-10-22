@@ -139,7 +139,9 @@ const Page = () => {
                   )}
                 </div>
 
-                <Button disabled={isLoading}>
+                <Button disabled={isLoading} className={buttonVariants({
+                    className : 'bg-blue-800 hover:bg-blue-100 text-gray-50 hover:text-black'
+                  })}>
                   {isLoading && (
                     <Loader2 className='mr-2 h-4 w-4 animate-spin' />
                   )}
@@ -165,6 +167,7 @@ const Page = () => {
               <Button
                 onClick={continueAsBuyer}
                 variant='secondary'
+                
                 disabled={isLoading}>
                 Continue etant qu&apos;acheteur
               </Button>

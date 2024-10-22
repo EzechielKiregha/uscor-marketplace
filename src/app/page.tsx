@@ -40,7 +40,9 @@ export default function Home() {
           Uscor-Marketplace vous aide à créer des espaces uniques et inspirants.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 mt-6">
-          <Button onClick={() => nav('/products')} className={buttonVariants()}>Explorer</Button>
+          <Button onClick={() => nav('/products')} className={buttonVariants({
+            className : 'bg-blue-800 hover:bg-blue-100 hover:text-black text-white'
+          })}>Explorer</Button>
           <Button onClick={() => nav('/products?category=meubles_salon&sort=desc')} variant='ghost'>Nos Produits de haute Qualite &rarr;</Button>
         </div>
       </div>
