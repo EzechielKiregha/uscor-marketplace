@@ -35,9 +35,9 @@ export const EmailTemplate = ({
       <Body style={main}>
         <Container style={container}>
           <Img
-            src={`${process.env.NEXT_PUBLIC_SERVER_URL}/${Icons.logo}`}
+            src={`${process.env.NEXT_PUBLIC_SERVER_URL}/apple-touch-icon.png`}
             width='150'
-            height='110'
+            height='150'
             alt='Uscor-market'
             style={logo}
           />
