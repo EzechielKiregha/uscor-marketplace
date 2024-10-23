@@ -9,6 +9,7 @@ import { getServerSideUser } from '@/lib/payload-utils'
 import { cookies } from 'next/headers'
 import UserAccountNav from './UserAccountNav'
 import MobileNav from './MobileNav'
+import Image from 'next/image'
 // import { useNavigation } from '../hooks/useNavigation'
 
 async function Navbar() {
@@ -25,10 +26,11 @@ async function Navbar() {
                         {/* TODO : Navbar sur mobile */}
                         <MobileNav />
 
-                        <div className="ml-4 flex lg:ml-0">
+                        <div className="ml-4 flex flex-row lg:ml-0">
 
                             <a href='/'>
-                                <Icons.logo className='h-16 w-30'/>
+                                <Image alt='logo' src='/apple-touch-icon.png' width={50} height={40} />
+                                {/* <Icons.logo className='h-16 w-30'/> */}
                             </a>
                         </div>
                         <div className="hidden z-50 lg:ml-8 lg:block lg:self-stretch">

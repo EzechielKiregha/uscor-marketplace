@@ -1,4 +1,5 @@
 "use client"
+import { Icons } from '@/components/Icons';
 import MaxWidthWrapper from '@/components/MaxWidthWrapper'
 import ProductReel from '@/components/ProductReel';
 import { Button, buttonVariants } from '@/components/ui/button';
@@ -33,8 +34,9 @@ export default function Home() {
       <div className="py-20 mx-auto text-center flex flex-col items-center max-w-3xl">
         <h1 className='text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl'>
         Transformez Votre Espace avec des{' '}
-          <span className="text-blue-600">Meubles Intemporels</span>  
+          <span className="text-blue-800">Meubles Intemporels</span>  
         </h1>
+        <Icons.logo className='h-24 w-auto '/>
         <p className='mt-6 text-lg max-w-prose text-muted-foreground'>
           Découvrez des meubles élégants et accessibles qui allient style et confort.
           Uscor-Marketplace vous aide à créer des espaces uniques et inspirants.
