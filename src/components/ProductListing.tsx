@@ -49,12 +49,12 @@ const ProductListing = ({
             'visible animate-in fade-in-5': isVisible,
           }
         )}
-        onClick={() => nav()}
+        // onClick={() => nav()}
         href={`/product/${product.id}`}>
         <div className='flex flex-col w-full'>
           <ImageSlider urls={validUrls} />
 
-          <h3 className='mt-4 font-medium text-sm text-gray-700'>
+          <h3 onClick={() => nav()} className='mt-4 font-medium text-sm text-gray-700'>
             {product.name}
           </h3>
           <p className='mt-1 text-sm text-gray-500'>

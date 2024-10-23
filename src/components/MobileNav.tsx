@@ -7,6 +7,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
+import { Icons } from './Icons'
 
 const MobileNav = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -60,6 +61,11 @@ const MobileNav = () => {
                 className='relative -m-2 inline-flex items-center justify-center rounded-md p-2 text-gray-400'>
                 <X className='h-6 w-6' aria-hidden='true' />
               </button>
+              <div className="ml-4 flex lg:ml-0">
+                  <a href='/'>
+                      <Icons.logo className='h-16 w-30'/>
+                  </a>
+              </div>
             </div>
 
             <div className='mt-2'>

@@ -83,9 +83,10 @@ async function Navbar() {
                                         /> 
                                     </div>
                                 }
-                                <div className="m-4 h-flow-root lg:ml-6">
-                                    <Cart/>
-                                </div>
+                                
+                            </div>
+                            <div className="ml-4 flow-root lg:ml-6">
+                                <Cart/>
                             </div>
                         </div>
                     </div>

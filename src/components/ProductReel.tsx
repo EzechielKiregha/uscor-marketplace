@@ -64,7 +64,6 @@ const ProductReel = (props: ProductReelProps) => {
         {href ? (
           <Link
             href={href}
-            onClick={() => nav()}
             className='hidden text-sm font-medium text-blue-600 hover:text-blue-500 md:block'>
             Voir plus dans une collection{' '}
             <span aria-hidden='true'>&rarr;</span>
