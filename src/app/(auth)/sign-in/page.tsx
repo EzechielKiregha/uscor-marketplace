@@ -58,7 +58,7 @@ const Page = () => {
         }
 
         if (isSeller) {
-          router.push('/sell')
+          router.push('/tableau-du-vendeur')
           return
         }
 
@@ -140,7 +140,7 @@ const Page = () => {
                 </div>
 
                 <Button disabled={isLoading} className={buttonVariants({
-                    className : 'bg-blue-800 hover:bg-blue-100 text-gray-50 hover:text-black'
+                    className : 'bg-blue-600 hover:bg-blue-100 text-gray-50 hover:text-black'
                   })}>
                   {isLoading && (
                     <Loader2 className='mr-2 h-4 w-4 animate-spin' />

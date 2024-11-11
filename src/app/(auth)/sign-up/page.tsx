@@ -133,7 +133,7 @@ const Page = () => {
                 <Button
                   disabled={ isLoading ? true : false}
                   className={buttonVariants({
-                    className : 'bg-blue-800 hover:bg-blue-100 text-gray-50 hover:text-black'
+                    className : 'bg-blue-600 hover:bg-blue-100 text-gray-50 hover:text-black'
                   })}
                 >
                   S&apos;inscrire

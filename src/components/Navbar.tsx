@@ -30,8 +30,9 @@ async function Navbar() {
 
                             <a href='/'>
                                 <Image alt='logo' src='/apple-touch-icon.png' width={50} height={40} />
-                                {/* <Icons.logo className='h-16 w-30'/> */}
                             </a>
+                            
+
                         </div>
                         <div className="hidden z-50 lg:ml-8 lg:block lg:self-stretch">
                             <NavItems/>

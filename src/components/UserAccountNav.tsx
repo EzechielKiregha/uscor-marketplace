@@ -46,7 +46,7 @@ const UserAccountNav = ({ user }: { user: User }) => {
 
         <DropdownMenuItem asChild>
           
-          <Link href='/sell' onClick={() => nav()}>
+          <Link href='/tableau-du-vendeur' onClick={() => nav()}>
           <LayoutDashboard className='h4 w-4 mr-2'/>
           Tableau de bord</Link>
         </DropdownMenuItem>

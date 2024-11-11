@@ -29,7 +29,7 @@ export const Media: CollectionConfig = {
     read: async ({ req }) => {
       const referer = req.headers.referer
 
-      if (!req.user || !referer?.includes('sell')) {
+      if (!req.user || !referer?.includes('tableau-du-vendeur')) {
         return true
       }
 

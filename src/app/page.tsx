@@ -34,7 +34,7 @@ export default function Home() {
       <div className="py-20 mx-auto text-center flex flex-col items-center max-w-3xl">
         <h1 className='text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl'>
         Transformez Votre Espace avec des{' '}
-          <span className="text-blue-800">Meubles Intemporels</span>  
+          <span className="text-blue-600">Meubles Du Monde Moderne</span>  
         </h1>
         <Icons.logo className='h-24 w-auto '/>
         <p className='mt-6 text-lg max-w-prose text-muted-foreground'>
@@ -43,7 +43,7 @@ export default function Home() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 mt-6">
           <Button onClick={() => nav('/products')} className={buttonVariants({
-            className : 'bg-blue-800 hover:bg-blue-100 hover:text-black text-white'
+            className : 'bg-blue-600 hover:bg-blue-100 hover:text-black text-white'
           })}>Explorer</Button>
           <Button onClick={() => nav('/products?category=meubles_salon&sort=desc')} variant='ghost'>Nos Produits de haute Qualite &rarr;</Button>
         </div>
