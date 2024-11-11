@@ -22,7 +22,7 @@ export default function ClientWrapper({
             setPrevPath(pathname); // Update the previous path
             router.refresh()
         }
-    }, [pathname, prevPath, setIsLoading]);
+    }, [router, pathname, prevPath, setIsLoading]);
 
     return (
         <>

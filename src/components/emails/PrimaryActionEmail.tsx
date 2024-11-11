@@ -13,7 +13,6 @@ import {
 } from '@react-email/components'
 
 import * as React from "react"
-import { Icons } from '../Icons'
 
 interface EmailTemplateProps {
   actionLabel: string
