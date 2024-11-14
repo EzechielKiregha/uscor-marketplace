@@ -84,7 +84,7 @@ exports.Media = {
                 switch (_c.label) {
                     case 0:
                         referer = req.headers.referer;
-                        if (!req.user || !(referer === null || referer === void 0 ? void 0 : referer.includes('sell'))) {
+                        if (!req.user || !(referer === null || referer === void 0 ? void 0 : referer.includes('tableau-du-vendeur'))) {
                             return [2 /*return*/, true];
                         }
                         return [4 /*yield*/, isAdminOrHasAccessToImages()({ req: req })];

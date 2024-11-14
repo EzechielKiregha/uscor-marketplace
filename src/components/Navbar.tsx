@@ -28,7 +28,7 @@ async function Navbar() {
                         <div className="ml-4 flex flex-row lg:ml-0">
 
                             <a href='/'>
-                                <Image alt='logo' src='/apple-touch-icon.png' width={50} height={40} />
+                                <Image alt='logo' src='/logo.png' width={50} height={40} />
                             </a>
                             
 

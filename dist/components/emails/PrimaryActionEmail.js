@@ -37,7 +37,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.PrimaryActionEmailHtml = exports.EmailTemplate = void 0;
 var components_1 = require("@react-email/components");
 var React = __importStar(require("react"));
-var Icons_1 = require("../Icons");
 var EmailTemplate = function (_a) {
     var actionLabel = _a.actionLabel, buttonText = _a.buttonText, href = _a.href;
     return (React.createElement(components_1.Html, null,
@@ -45,7 +44,7 @@ var EmailTemplate = function (_a) {
         React.createElement(components_1.Preview, null, "Un marche a tellement de produits de bonne qualite."),
         React.createElement(components_1.Body, { style: main },
             React.createElement(components_1.Container, { style: container },
-                React.createElement(components_1.Img, { src: "".concat(process.env.NEXT_PUBLIC_SERVER_URL, "/").concat(Icons_1.Icons.logo), width: '150', height: '110', alt: 'Uscor-market', style: logo }),
+                React.createElement(components_1.Img, { src: "".concat(process.env.NEXT_PUBLIC_SERVER_URL, "/logo-email.png"), width: '150', height: '150', alt: 'Uscor-market', style: logo }),
                 React.createElement(components_1.Text, { style: paragraph }, "Salut,"),
                 React.createElement(components_1.Text, { style: paragraph },
                     "Bienvenue, Nous sommes Uscor-Market Nous offrons des meubles de haute qualit\u00E9 \u00E0 des prix qui respectent votre budget. ",

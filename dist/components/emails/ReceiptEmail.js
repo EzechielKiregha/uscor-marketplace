@@ -49,7 +49,7 @@ var ReceiptEmail = function (_a) {
             React.createElement(components_1.Container, { style: container },
                 React.createElement(components_1.Section, null,
                     React.createElement(components_1.Column, null,
-                        React.createElement(components_1.Img, { src: "".concat(process.env.NEXT_PUBLIC_SERVER_URL, "/email-for-testing-test-email-accounts.svg"), width: '100', height: '100', alt: 'Uscor-Market' })),
+                        React.createElement(components_1.Img, { src: "".concat(process.env.NEXT_PUBLIC_SERVER_URL, "/apple-touch-icon.png"), width: '100', height: '100', alt: 'Uscor-Market' })),
                     React.createElement(components_1.Column, { align: 'right', style: tableCell },
                         React.createElement(components_1.Text, { style: heading }, "Recu"))),
                 React.createElement(components_1.Section, { style: informationTable },
