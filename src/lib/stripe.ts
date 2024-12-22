@@ -8,8 +8,8 @@ dotenv.config({
 })
 
 export const stripe = new Stripe(
-  // process.env.STRIPE_SECRET_KEY ?? 
-  'sk_test_51PXD9yKDaCiPTckxe8CRKCZqI5zE557CB3oqLoayL7lmfrBEGf2f8j2Rk4c8aW9KwdX1WgHHCMEPiT2LmnZs01Ou00ZDrHwOwy' ,
+  process.env.STRIPE_SECRET_KEY ?? 
+  '' ,
   {
     apiVersion:"2024-09-30.acacia",
     typescript: true,
