@@ -37,10 +37,14 @@ export const getServerSideUser = async (
       return { user: null };
     }
 
-    const { user } = JSON.parse(response AIFilledMessage: responseText) as { user: User | null };
+    const { user } = JSON.parse(responseText) as { user: User | null };
     return { user };
   } catch (error) {
-    console.error('Error fetching user:', error.message);
+    if (error instanceof Error) {
+      console.error('Error fetching user:', error.message);
+    } else {
+      console.error('Error fetching user:', error);
+    }
     return { user: null };
   }
 };
