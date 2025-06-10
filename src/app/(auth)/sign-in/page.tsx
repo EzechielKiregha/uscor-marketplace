@@ -68,6 +68,9 @@ const Page = () => {
       onError: (err) => {
         if (err.data?.code === 'UNAUTHORIZED') {
           toast.error("Nom d'utilisateur ou mot de passe erronee!")
+        } else {
+          console.error('Sign-in error:', err);
+          toast.error('Une erreur est survenue. Veuillez réessayer plus tard.');
         }
       },
     })
